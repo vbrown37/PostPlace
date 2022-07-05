@@ -31,5 +31,5 @@ jobs:
     
     - name: Build Front-End
       working-directory: ./src/main/webapp
-      run: npm build
+      run: npm run build
       
