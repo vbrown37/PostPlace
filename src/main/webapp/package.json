@@ -6,7 +6,8 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "ci": "npm install -g @angular/cli@latest && npm install && npm run build"
   },
   "private": true,
   "dependencies": {
