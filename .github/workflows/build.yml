@@ -28,6 +28,9 @@ jobs:
       uses: actions/setup-node@v3
       with:
         node-version: 14
+        
+    - name: Install Dependencies
+      run: npm install
     
     - name: Build Front-End
       working-directory: ./src/main/webapp
