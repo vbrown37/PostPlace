@@ -1,1 +1,38 @@
-<p>dashboard works!</p>
+<div class="w-screen h-screen bg-primary">
+
+  <!-- sidebar -->
+  <div class="bg-primary h-screen w-2/12 flex flex-col ml-[2%]
+              border-r-ternary border-l-0 border-t-0 border-b-0 border">
+
+    <!-- logo -->
+    <div class="bg-primary rounded-br-3xl h-[10vh] flex flex-col justify-center place-items-center
+                border-t-ternary border-b-ternary border-r-ternary border-l-0 border">
+      <p class="font-raleway text-white align-middle font-medium text-4xl">salence</p>
+    </div>
+
+    <!-- main selection -->
+    <div class="bg-primary rounded-r-3xl h-full flex flex-col p-[3vw] justify-start gap-10
+                border-t-ternary border-b-ternary border-r-ternary border-l-0 border">
+
+      <!-- option -->
+      <div *ngFor="let selection of selectionList"
+           class="flex flex-row content-between justify-start gap-4 place-items-center">
+        <fa-icon *ngIf="selection.icon" [icon]="selection.icon" class="text-white"></fa-icon>
+        <p class="font-raleway text-white text-xl flex flex-col font-medium">{{selection.label}}</p>
+      </div>
+    </div>
+
+    <!-- secondary selection -->
+    <div class="bg-primary rounded-tr-3xl h-1/4 flex flex-col p-[3vw] justify-start gap-5
+                border-t-ternary border-b-ternary border-r-ternary border-l-0 border">
+      <div *ngFor="let selection of moreSelectionList"
+           class="flex flex-row content-between justify-start gap-4 place-items-center">
+
+        <fa-icon *ngIf="selection.icon" [icon]="selection.icon" class="text-white"></fa-icon>
+
+        <p class="font-raleway text-white text-xl flex flex-col font-medium">{{selection.label}}</p>
+      </div>
+    </div>
+  </div>
+
+</div>
