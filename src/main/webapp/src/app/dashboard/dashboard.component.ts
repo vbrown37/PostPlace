@@ -1,8 +1,9 @@
 import {Component, OnInit} from '@angular/core';
 import {
+  faBell, faCaretDown,
   faCartShopping,
   faChartSimple, faDoorOpen, faGear,
-  faReceipt,
+  faReceipt, faSearch,
   faShoppingBag,
   faUser, IconDefinition
 } from "@fortawesome/free-solid-svg-icons";
@@ -18,6 +19,10 @@ interface ILink {
   styleUrls: ['./dashboard.component.scss']
 })
 export class DashboardComponent implements OnInit {
+
+  searchIcon: IconDefinition = faSearch;
+  bellIcon: IconDefinition = faBell;
+  caretDownIcon: IconDefinition = faCaretDown;
 
   selectionList: ILink[] = [
     {

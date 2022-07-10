@@ -8,7 +8,7 @@ module.exports = {
       colors: {
         "primary" : "#141414",
         "secondary": "#cff466",
-        "ternary" : "#232323"
+        "ternary" : "#1d1d1d"
       },
       fontFamily: {
         "raleway": "raleway, sans-serif"

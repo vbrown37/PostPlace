@@ -1,38 +1,84 @@
-<div class="w-screen h-screen bg-primary">
+<div class="w-screen h-screen bg-primary flex flex-row">
+
 
   <!-- sidebar -->
-  <div class="bg-primary h-screen w-2/12 flex flex-col ml-[2%]
+  <div class="bg-primary h-screen w-[15%] flex flex-col ml-[2%]
               border-r-ternary border-l-0 border-t-0 border-b-0 border">
 
     <!-- logo -->
-    <div class="bg-primary rounded-br-3xl h-[10vh] flex flex-col justify-center place-items-center
+    <div class="bg-primary rounded-br-3xl h-1/12 flex flex-col pt-5 pb-5 justify-center place-items-start
                 border-t-ternary border-b-ternary border-r-ternary border-l-0 border">
       <p class="font-raleway text-white align-middle font-medium text-4xl">salence</p>
     </div>
 
     <!-- main selection -->
-    <div class="bg-primary rounded-r-3xl h-full flex flex-col p-[3vw] justify-start gap-10
+    <div class="bg-primary rounded-r-3xl h-full flex flex-col pt-[5vh] justify-start gap-5
                 border-t-ternary border-b-ternary border-r-ternary border-l-0 border">
 
-      <!-- option -->
+      <!-- options -->
       <div *ngFor="let selection of selectionList"
            class="flex flex-row content-between justify-start gap-4 place-items-center">
         <fa-icon *ngIf="selection.icon" [icon]="selection.icon" class="text-white"></fa-icon>
-        <p class="font-raleway text-white text-xl flex flex-col font-medium">{{selection.label}}</p>
+        <p class="font-raleway text-white text-lg flex flex-col font-medium">{{selection.label}}</p>
       </div>
     </div>
 
     <!-- secondary selection -->
-    <div class="bg-primary rounded-tr-3xl h-1/4 flex flex-col p-[3vw] justify-start gap-5
+    <div class="bg-primary rounded-tr-3xl h-1/2 flex flex-col pt-[5vh] justify-start gap-5
                 border-t-ternary border-b-ternary border-r-ternary border-l-0 border">
       <div *ngFor="let selection of moreSelectionList"
            class="flex flex-row content-between justify-start gap-4 place-items-center">
 
         <fa-icon *ngIf="selection.icon" [icon]="selection.icon" class="text-white"></fa-icon>
 
-        <p class="font-raleway text-white text-xl flex flex-col font-medium">{{selection.label}}</p>
+        <p class="font-raleway text-white text-lg flex flex-col font-medium">{{selection.label}}</p>
       </div>
     </div>
   </div>
 
+  <!-- main content -->
+  <div class="flex flex-col h-full w-full pl-10 pr-10 gap-5">
+
+    <!-- header -->
+    <div class="w-full">
+
+      <div class="flex flex-row justify-between p-5">
+
+        <div class="flex flex-col">
+          <p class="text-white font-medium text-3xl">Welcome back, Jenny</p>
+          <p class="text-gray-600">Here's what's happening with your store today.</p>
+        </div>
+
+
+        <div class="flex flex-row gap-10">
+          <fa-icon [icon]="searchIcon" class="text-white text-lg"></fa-icon>
+          <fa-icon [icon]="bellIcon" class="text-white text-lg"></fa-icon>
+          <div class="flex flex-row gap-3">
+
+            <!-- avatar -->
+            <div class="relative w-10 h-10">
+              <img class="rounded-full border border-secondary"
+                   src="https://randomuser.me/api/portraits/women/90.jpg" alt="user image"/>
+            </div>
+            <p class="text-white">Jenny Wilson</p>
+            <fa-icon [icon]="caretDownIcon" class="text-white"></fa-icon>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- statistics board -->
+    <div class="overflow-hidden bg-gray-700 shadow-xl w-full h-1/5 border border-0 rounded-lg gap-[1px] flex flex-row">
+      <div class="box-content bg-secondary border border-l-0 border-t-0 border-b-0 border-r-1 w-full">
+      </div>
+      <div class="bg-ternary w-full">
+      </div>
+      <div class="bg-ternary w-full">
+      </div>
+      <div class="bg-ternary w-full">
+      </div>
+    </div>
+
+  </div>
 </div>
